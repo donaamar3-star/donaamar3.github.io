@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ballet Center | Donna Amar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1d1d1d;
+            background: #fff;
+        }
+
+        header {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-decoration: none;
+            color: #1d1d1d;
+        }
+
+        nav {
+            display: flex;
+            gap: 45px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1d1d1d;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .project {
+            width: 88%;
+            max-width: 1450px;
+            margin: 80px auto 120px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 55px;
+            color: #777;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .project-number {
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 7vw, 100px);
+            font-weight: 400;
+            letter-spacing: -3px;
+            line-height: .95;
+        }
+
+        .subtitle {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            width: 100%;
+            margin-top: 65px;
+            overflow: hidden;
+        }
+
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 100px;
+            margin-top: 75px;
+            padding-bottom: 75px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .details {
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .coming {
+            padding: 100px 0;
+            text-align: center;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            padding: 45px 6%;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                height: 90px;
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .project {
+                width: 90%;
+                margin-top: 45px;
+            }
+
+            .description {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">DONNA AMAR</a>
+
+    <nav>
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#projects">PROJECTS</a>
+        <a href="index.html#contact">CONTACT</a>
+    </nav>
+</header>
+
+<main class="project">
+
+    <a href="index.html#projects" class="back">← Back to projects</a>
+
+    <div class="project-number">01 / 2026</div>
+
+    <h1>Ballet Center</h1>
+
+    <div class="subtitle">
+        Final Project · Architecture & Interior Design
+    </div>
+
+    <div class="hero">
+        <img src="ballet-center-main.png" alt="Ballet Center by Donna Amar">
+    </div>
+
+    <section class="description">
+
+        <div class="details">
+            Final Project<br>
+            2026<br>
+            Architecture & Interior Design<br>
+            Revit
+        </div>
+
+        <div class="text">
+            The Ballet Center is a final architectural project combining
+            rehearsal spaces, a performance hall and public areas.
+            The project was developed from the initial architectural concept
+            through detailed planning, construction details, structure
+            and interior design.
+        </div>
+
+    </section>
+
+    <div class="coming">
+        Selected drawings, details & visualizations
+    </div>
+
+</main>
+
+<footer>
+    <span>DONNA AMAR</span>
+    <span>ARCHITECTURE & INTERIOR DESIGN · 2026</span>
+</footer>
+
+</body>
+</html>
