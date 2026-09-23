@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Donna Amar | Architecture & Interior Design</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1c1c1c;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid #eeeeee;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 22px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      letter-spacing: 4px;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 35px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+    .hero {
+      height: 100vh;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 30px 60px;
+      background: #f5f6f4;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 9vw, 125px);
+      font-weight: 400;
+      letter-spacing: 8px;
+      line-height: 1;
+    }
+
+    .hero p {
+      margin-top: 28px;
+      font-size: 15px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    section {
+      max-width: 1250px;
+      margin: auto;
+      padding: 120px 40px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 50px;
+      color: #777;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 100px;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .about-text {
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.9;
+      color: #444;
+    }
+
+    .projects {
+      background: #f7f7f5;
+      max-width: none;
+    }
+
+    .projects-inner {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .project {
+      margin-bottom: 100px;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 600px;
+      background: #e6e6e2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .project-info {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .project-info h3 {
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .project-info p {
+      max-width: 520px;
+      color: #666;
+    }
+
+    .project-number {
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 100px;
+    }
+
+    .skills h2 {
+      font-size: 42px;
+      font-weight: 400;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 60px;
+      font-size: 18px;
+    }
+
+    .skills-list div {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .contact {
+      max-width: none;
+      background: #191919;
+      color: white;
+      text-align: center;
+      padding: 130px 30px;
+    }
+
+    .contact h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .contact p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      background: #191919;
+      color: #777;
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        padding: 20px;
+      }
+
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 10px;
+      }
+
+      section {
+        padding: 80px 25px;
+      }
+
+      .about,
+      .skills {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .project-image {
+        height: 350px;
+      }
+
+      .project-info {
+        flex-direction: column;
+      }
+
+      .skills-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">DONNA AMAR</div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>DONNA<br>AMAR</h1>
+    <p>Architecture & Interior Design</p>
+  </div>
+</div>
+
+<section id="about">
+
+  <div class="section-title">01 / About</div>
+
+  <div class="about">
+
+    <h2>
+      Architecture,<br>
+      Interior Design<br>
+      & Detail.
+    </h2>
+
+    <div class="about-text">
+      <p>
+        Architecture and Interior Design graduate with a passion for
+        thoughtful planning, materiality and detail.
+      </p>
+
+      <br>
+
+      <p>
+        My work explores the relationship between form, movement,
+        structure and the human experience — from the initial concept
+        through detailed architectural planning.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="projects" id="projects">
+
+  <div class="projects-inner">
+
+    <div class="section-title">02 / Selected Projects</div>
+
+    <div class="project">
+
+      <div class="project-image">
+        Ballet Center — Project Image
+      </div>
+
+      <div class="project-info">
+
+        <div>
+          <div class="project-number">01 / 2026</div>
+          <h3>Ballet Center</h3>
+        </div>
+
+        <p>
+          Final project — a ballet center combining rehearsal spaces,
+          a performance hall and public areas. The project was developed
+          from the initial architectural concept through detailed planning,
+          construction details, structure and interior design.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="project">
+
+      <div class="project-image">
+        Kindergarten Complex — Project Image
+      </div>
+
+      <div class="project-info">
+
+        <div>
+          <div class="project-number">02</div>
+          <h3>Kindergarten Complex</h3>
+        </div>
+
+        <p>
+          Architectural planning of a kindergarten complex focusing on
+          spatial organization, circulation, functionality and the
+          relationship between interior and exterior spaces.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="project">
+
+      <div class="project-image">
+        Student Housing — Project Image
+      </div>
+
+      <div class="project-info">
+
+        <div>
+          <div class="project-number">03</div>
+          <h3>Student Housing</h3>
+        </div>
+
+        <p>
+          Student housing project exploring residential units,
+          shared spaces and functional architectural planning.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+
+  <div class="section-title">03 / Skills</div>
+
+  <div class="skills">
+
+    <h2>
+      Tools &<br>
+      Expertise
+    </h2>
+
+    <div class="skills-list">
+      <div>Revit</div>
+      <div>AutoCAD</div>
+      <div>SketchUp</div>
+      <div>Architectural Planning</div>
+      <div>Construction Details</div>
+      <div>Interior Design</div>
+      <div>3D Modeling</div>
+      <div>Presentation</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="section-title">04 / Contact</div>
+
+  <h2>Let's create something.</h2>
+
+  <p>Architecture & Interior Design · Israel</p>
+
+  <a href="mailto:donaamar3@gmail.com">
+    donaamar3@gmail.com
+  </a>
+
+</section>
+
+<footer>
+  © 2026 Donna Amar — Architecture & Interior Design
+</footer>
+
+</body>
+</html>
